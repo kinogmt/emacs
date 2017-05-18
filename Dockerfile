@@ -8,8 +8,10 @@ ENV URL=${URL0}/${FILE}
 
 
 RUN $INST install -y gcc tar make ncurses-devel 
-RUN (curl -O $URL; tar zxf ./$FILE; cd emacs-${VER}; \
-     ./configure --prefix=/usr/local/emacs --without-x; make install)
+RUN curl -O $URL
+RUN (tar zxf ./$FILE; cd emacs-${VER}; \
+     ./configure --prefix=/usr/local/emacs --without-x; make)
+RUN make install
 
 ADD startservice.sh /usr/local/startservice.sh
 
