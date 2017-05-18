@@ -1,4 +1,7 @@
 #!/bin/sh
+TTT=/usr/local/docker-host
+TARGET=/usr/local/docker
 
-ls -l /usr/local/docker/
-cp -R /usr/local/docker/* /usr/local/docker-host/
+ls -l $TARGET
+mkdir -p TTT
+cp -R $TARGET/* ${TTT}/

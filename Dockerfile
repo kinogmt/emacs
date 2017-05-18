@@ -14,7 +14,5 @@ RUN (tar zxf ./$FILE; cd emacs-${VER}; \
 
 ADD startservice.sh /usr/local/startservice.sh
 
-
-EXPOSE 22
 CMD ["/usr/local/startservice.sh"]
 
