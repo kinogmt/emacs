@@ -1,7 +1,7 @@
 === copy and install
 
 -------------------
-docker run --rm -v /usr/local/docker:/usr/local/docker kinogmt/emacs:<TAG>
+docker run --rm -v /usr/local/docker:/usr/local/docker-host kinogmt/emacs:<TAG>
 -------------------
 
 === run
