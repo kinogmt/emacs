@@ -10,3 +10,16 @@ docker run --rm -v /usr/local/docker:/usr/local/docker kinogmt/emacs:<TAG>
 /usr/local/docker/emacs/bin/emacs -nw
 -------------------
 
+
+=== misc
+
+Following kind of workaround is necessary for bug below.
+
+--------------------------
+    echo 0 > /proc/sys/kernel/randomize_va_space
+    docker build ...
+    echo 2 > /proc/sys/kernel/randomize_va_space
+--------------------------
+
+
+https://debbugs.gnu.org/cgi/bugreport.cgi?bug=23529
