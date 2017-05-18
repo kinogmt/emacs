@@ -14,7 +14,7 @@ docker run --rm -v /usr/local/docker:/usr/local/docker kinogmt/emacs:<TAG>
 === misc
 
 Following kind of workaround for the bug below
-is necessary to *build".
+is necessary to build.
 
 --------------------------
     echo 0 > /proc/sys/kernel/randomize_va_space
